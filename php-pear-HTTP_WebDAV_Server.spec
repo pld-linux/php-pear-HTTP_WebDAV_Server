@@ -7,12 +7,12 @@
 Summary:	%{_pearname} - WebDAV Server Baseclass
 Summary(pl):	%{_pearname} - podstawowa klasa serwera WebDAV
 Name:		php-pear-%{_pearname}
-Version:	0.99
+Version:	0.99.1
 Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	565eb8a14cc5cb547891be9e29d591ea
+# Source0-md5:	54c5211c696b7e7a02a8ad6efa807091
 URL:		http://pear.php.net/package/HTTP_WebDAV_Server/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 Requires:	php-pear
@@ -37,17 +37,17 @@ Ta klasa ma w PEAR status: %{_status}.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}/Server
+install -d $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}/{db,Server,Tools}
 
 install %{_pearname}-%{version}/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}
 install %{_pearname}-%{version}/Server/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}/Server
+install %{_pearname}-%{version}/db/*.sql $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}/db
+install %{_pearname}-%{version}/Tools/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}/Tools
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%dir %{php_pear_dir}/%{_class}/%{_subclass}
-%dir %{php_pear_dir}/%{_class}/%{_subclass}/Server
 %{php_pear_dir}/%{_class}/%{_subclass}/*.php
-%{php_pear_dir}/%{_class}/%{_subclass}/Server/*.php
+%{php_pear_dir}/%{_class}/%{_subclass}
