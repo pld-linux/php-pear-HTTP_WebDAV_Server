@@ -4,7 +4,7 @@
 %define		_status		alpha
 %define		_pearname	%{_class}_%{_subclass}_Server
 Summary:	%{_pearname} - WebDAV Server Baseclass
-Summary(pl):	%{_pearname} -
+Summary(pl):	%{_pearname} - podstawowa klasa serwera WebDAV
 Name:		php-pear-%{_pearname}
 Version:	0.9
 Release:	1
