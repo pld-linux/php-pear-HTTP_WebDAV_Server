@@ -1,17 +1,18 @@
 %include	/usr/lib/rpm/macros.php
 %define		_class		HTTP
 %define		_subclass	WebDAV
-%define		_status		alpha
+%define		_status		beta
 %define		_pearname	%{_class}_%{_subclass}_Server
+
 Summary:	%{_pearname} - WebDAV Server Baseclass
 Summary(pl):	%{_pearname} - podstawowa klasa serwera WebDAV
 Name:		php-pear-%{_pearname}
-Version:	0.9
+Version:	0.99
 Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
-# Source0-md5:	db5619932db89e88365b539b3abbfb42
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
+# Source0-md5:	565eb8a14cc5cb547891be9e29d591ea
 URL:		http://pear.php.net/package/HTTP_WebDAV_Server/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 Requires:	php-pear
