@@ -24,7 +24,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Mostly RFC2518 compliant helper class for WebDAV server
 implementation.
 
-This class has in PEAR status: %{_status}.
+In PEAR status of this package is: %{_status}.
 
 %description -l pl
 W wiêkszo¶ci zgodna z RFC2518 klasa pomocnicza do implementacji
