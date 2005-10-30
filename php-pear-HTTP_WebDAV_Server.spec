@@ -9,7 +9,7 @@ Summary(pl):	%{_pearname} - podstawowa klasa serwera WebDAV
 Name:		php-pear-%{_pearname}
 Version:	1.0.0
 %define	_rc rc1
-%define	_rel 1
+%define	_rel 2
 Release:	0.%{_rc}.%{_rel}
 License:	PHP 2.02
 Group:		Development/Languages/PHP
@@ -18,7 +18,7 @@ Source0:	http://pear.php.net/get/%{_pearname}-%{version}%{_rc}.tgz
 URL:		http://pear.php.net/package/HTTP_WebDAV_Server/
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 Requires:	php-common >= 3:4.3
-Requires:	php-pear
+Requires:	php-pear >= 4:1.0-9.2
 Requires:	php-pear-HTTP >= 1.0
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -51,4 +51,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc install.log
 %doc docs/%{_pearname}/*
 %{php_pear_dir}/.registry/*.reg
-%{php_pear_dir}/%{_class}/%{_subclass}
+%dir %{php_pear_dir}/%{_class}/%{_subclass}
+%{php_pear_dir}/%{_class}/%{_subclass}/*.php
+%{php_pear_dir}/%{_class}/%{_subclass}/Server
+%{php_pear_dir}/%{_class}/%{_subclass}/Tools/*
