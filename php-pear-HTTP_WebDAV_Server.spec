@@ -33,7 +33,7 @@ In PEAR status of this package is: %{_status}.
 
 %description -l pl.UTF-8
 W większości zgodna z RFC2518 klasa pomocnicza do implementacji
-servera WebDAV.
+serwera WebDAV.
 
 Ta klasa ma w PEAR status: %{_status}.
 
