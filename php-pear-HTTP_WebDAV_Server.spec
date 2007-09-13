@@ -4,7 +4,7 @@
 %define		_status		beta
 %define		_pearname	%{_class}_%{_subclass}_Server
 
-%define	_rc RC3
+%define	_rc RC4
 %define	_rel 1
 Summary:	%{_pearname} - WebDAV Server Baseclass
 Summary(pl.UTF-8):	%{_pearname} - podstawowa klasa serwera WebDAV
@@ -14,7 +14,7 @@ Release:	1.%{_rc}.%{_rel}
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}%{_rc}.tgz
-# Source0-md5:	d970aa31ae9005c50c4ee17e8b65a94d
+# Source0-md5:	53c848aed2c62c78cacf0431746d2cd7
 URL:		http://pear.php.net/package/HTTP_WebDAV_Server/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
