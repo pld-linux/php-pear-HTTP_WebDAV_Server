@@ -5,7 +5,7 @@
 %define		_pearname	%{_class}_%{_subclass}_Server
 
 %define	_rc RC4
-%define	_rel 1
+%define	_rel 2
 Summary:	%{_pearname} - WebDAV Server Baseclass
 Summary(pl.UTF-8):	%{_pearname} - podstawowa klasa serwera WebDAV
 Name:		php-pear-%{_pearname}
