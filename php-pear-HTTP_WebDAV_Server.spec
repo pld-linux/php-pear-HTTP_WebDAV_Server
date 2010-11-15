@@ -1,10 +1,8 @@
 %include	/usr/lib/rpm/macros.php
-%define		_class		HTTP
-%define		_subclass	WebDAV
 %define		_status		beta
-%define		_pearname	%{_class}_%{_subclass}_Server
-%define		subver RC4
-%define		rel 3
+%define		_pearname	HTTP_WebDAV_Server
+%define		subver RC5
+%define		rel 1
 Summary:	%{_pearname} - WebDAV Server Baseclass
 Summary(pl.UTF-8):	%{_pearname} - podstawowa klasa serwera WebDAV
 Name:		php-pear-%{_pearname}
@@ -13,7 +11,7 @@ Release:	1.%{subver}.%{rel}
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}%{subver}.tgz
-# Source0-md5:	53c848aed2c62c78cacf0431746d2cd7
+# Source0-md5:	2234186958bebf3b0e420ec3d32a0590
 URL:		http://pear.php.net/package/HTTP_WebDAV_Server/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
@@ -39,10 +37,15 @@ Ta klasa ma w PEAR status: %{_status}.
 %prep
 %pear_package_setup
 
+mv .%{php_pear_dir}/data/HTTP_WebDAV_Server/* docs/%{_pearname}
+
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{php_pear_dir}
 %pear_package_install
+
+# tests should not be packaged
+rm -rf $RPM_BUILD_ROOT%{php_pear_dir}/tests/%{_pearname}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -52,6 +55,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc install.log
 %doc docs/%{_pearname}/*
 %{php_pear_dir}/.registry/*.reg
-%{php_pear_dir}/%{_class}/%{_subclass}/*.php
-%{php_pear_dir}/%{_class}/%{_subclass}/Server
-%{php_pear_dir}/%{_class}/%{_subclass}/Tools/*
+%{php_pear_dir}/HTTP/WebDAV/Server.php
+%{php_pear_dir}/HTTP/WebDAV/Server
+%{php_pear_dir}/HTTP/WebDAV/Tools/_parse_*.php
+%{php_pear_dir}/HTTP/WebDAV/file.php
