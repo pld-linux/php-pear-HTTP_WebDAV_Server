@@ -1,5 +1,5 @@
 %define		subver RC7
-%define		rel 1
+%define		rel 2
 %define		status		beta
 %define		pearname	HTTP_WebDAV_Server
 %include	/usr/lib/rpm/macros.php
@@ -16,7 +16,7 @@ URL:		http://pear.php.net/package/HTTP_WebDAV_Server/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.580
-Requires:	php-common >= 3:4.4
+Requires:	php(core) >= 4.4
 Requires:	php-pear >= 4:1.0-9.2
 Requires:	php-pear-HTTP >= 1.0
 BuildArch:	noarch
