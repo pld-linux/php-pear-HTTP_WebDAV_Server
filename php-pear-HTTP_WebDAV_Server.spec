@@ -1,5 +1,5 @@
-%define		subver RC7
-%define		rel 2
+%define		subver RC8
+%define		rel 1
 %define		status		beta
 %define		pearname	HTTP_WebDAV_Server
 %include	/usr/lib/rpm/macros.php
@@ -11,7 +11,7 @@ Release:	1.%{subver}.%{rel}
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{pearname}-%{version}%{subver}.tgz
-# Source0-md5:	eb3e2e1649c91d415d5360d15edb8edf
+# Source0-md5:	7b90c53afbb84f198665afa5b6f52a8a
 URL:		http://pear.php.net/package/HTTP_WebDAV_Server/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
