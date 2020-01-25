@@ -2,7 +2,6 @@
 %define		rel 1
 %define		status		beta
 %define		pearname	HTTP_WebDAV_Server
-%include	/usr/lib/rpm/macros.php
 Summary:	%{pearname} - WebDAV Server Baseclass
 Summary(pl.UTF-8):	%{pearname} - podstawowa klasa serwera WebDAV
 Name:		php-pear-%{pearname}
