@@ -1,5 +1,5 @@
 %define		subver RC8
-%define		rel 1
+%define		rel 2
 %define		status		beta
 %define		pearname	HTTP_WebDAV_Server
 Summary:	%{pearname} - WebDAV Server Baseclass
